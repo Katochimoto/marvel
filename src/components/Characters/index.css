@@ -1,0 +1,24 @@
+@import "../../style";
+
+.characters {
+  position: relative;
+  max-width: 55em;
+  overflow: hidden;
+}
+
+.characters-scroll {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.characters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.characters-loader {
+  color: var(--color-bg);
+  padding: 1em;
+}

@@ -1,0 +1,18 @@
+@import "../index.css";
+
+@define-mixin LayoutCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  padding: var(--size-element-margin);
+  box-sizing: border-box;
+  z-index: 2;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+}

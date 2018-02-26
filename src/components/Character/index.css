@@ -1,0 +1,48 @@
+@import "../../style";
+
+.character {
+  display: flex;
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.character-photo,
+.character-name {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition:
+    opacity var(--duration-main) ease,
+    transform var(--duration-main) ease;
+}
+
+.character-photo {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.character-name {
+  opacity: 0;
+  transform: rotateX(-180deg);
+  padding: 0.5em;
+  margin: 0;
+  background: var(--color-bg);
+}
+
+.character:hover {
+  z-index: 1;
+
+  .character-photo {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+
+  .character-name {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}

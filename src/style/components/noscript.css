@@ -1,0 +1,39 @@
+@import "../index.css";
+
+:global .noscript {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.5em;
+  box-sizing: border-box;
+  z-index: 2;
+  color: #fff;
+}
+
+:global .noscript:before {
+  content: '';
+  display: block;
+}
+
+:global .noscript-header {
+  color: #fff;
+}
+
+:global .noscript-content {
+  text-align: center;
+}
+
+:global .noscript-footer {
+  @mixin Footer;
+}
+
+:global .noscript-copyright {
+  @mixin Copyright;
+}

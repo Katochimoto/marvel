@@ -1,0 +1,9 @@
+@import "../../style";
+
+.footer {
+  @mixin Footer;
+}
+
+.copyright {
+  @mixin Copyright;
+}
