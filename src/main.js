@@ -14,7 +14,7 @@ ReactDOM.render((
 // @if NODE_ENV='production'
 (function () {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js', {
+    navigator.serviceWorker.register('/marvel/sw.js', {
       scope: '/'
     })
   }
