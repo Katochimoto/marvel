@@ -49,6 +49,8 @@ var common = {
     crossOriginLoading: 'anonymous'
   },
 
+  devtool: 'source-map',
+
   module: {
     rules: [
       {
