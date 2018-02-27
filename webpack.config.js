@@ -22,7 +22,6 @@ var isDev = NODE_ENV === 'development';
 var srcPath = path.join(__dirname, 'src');
 var distPath = isDev ? path.join(__dirname, 'dist') : path.join(__dirname, 'docs');
 var homepage = isDev ? '' : package.homepage;
-var GOOGLE_TAG = package.googleTag;
 
 var extractInlineCss = new ExtractTextPlugin({
   filename: 'inline.css',
@@ -59,8 +58,7 @@ var common = {
           {
             loader: 'preprocess-loader',
             options: {
-              'NODE_ENV': NODE_ENV,
-              'GOOGLE_TAG': GOOGLE_TAG
+              'NODE_ENV': NODE_ENV
             }
           },
           {
@@ -179,7 +177,9 @@ var common = {
   },
 
   plugins: [
-    new CleanWebpackPlugin([ 'dist/**/*' ], { verbose: true }),
+    new CleanWebpackPlugin([
+      isDev ? 'dist/**/*' : 'docs/**/*'
+    ], { verbose: true }),
     (isDev ? null : new BundleAnalyzerPlugin({ analyzerMode: 'static' })),
     (isDev ? null : new webpack.optimize.OccurrenceOrderPlugin()),
     new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
@@ -272,7 +272,6 @@ var common = {
       mobile: true,
       lang: 'en-US',
       alwaysWriteToDisk: true,
-      googleTag: isDev ? false : { trackingId: GOOGLE_TAG },
       baseHref: homepage,
       reInlineCss: /inline\.css$/
     }, {

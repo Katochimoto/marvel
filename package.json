@@ -4,7 +4,7 @@
   "repository": "git@github.com:Katochimoto/marvel.git",
   "author": "Katochimoto <bufpost@yandex.ru>",
   "license": "MIT",
-  "homepage": "https://marvel.info",
+  "homepage": "https://katochimoto.github.io/marvel",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack -p"

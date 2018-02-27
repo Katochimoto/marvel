@@ -1,27 +1,27 @@
 {
   "icons": [
     {
-      "src": "https://marvel.info/manifest/icon_512x512.f215a69917739bb5fbefd86a6503e32b.png",
+      "src": "https://katochimoto.github.io/marvel/manifest/icon_512x512.f215a69917739bb5fbefd86a6503e32b.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "https://marvel.info/manifest/icon_256x256.8cd5f6533ada4b58fc2187787767f190.png",
+      "src": "https://katochimoto.github.io/marvel/manifest/icon_256x256.8cd5f6533ada4b58fc2187787767f190.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "https://marvel.info/manifest/icon_192x192.0903c64a73a5ee89ddd6e3423d3d748a.png",
+      "src": "https://katochimoto.github.io/marvel/manifest/icon_192x192.0903c64a73a5ee89ddd6e3423d3d748a.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://marvel.info/manifest/icon_128x128.76faea979a2ef85aaeeb2ec7ebe40385.png",
+      "src": "https://katochimoto.github.io/marvel/manifest/icon_128x128.76faea979a2ef85aaeeb2ec7ebe40385.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "https://marvel.info/manifest/icon_96x96.dccb9e7acb4eedf9b05ea90cad9cef30.png",
+      "src": "https://katochimoto.github.io/marvel/manifest/icon_96x96.dccb9e7acb4eedf9b05ea90cad9cef30.png",
       "sizes": "96x96",
       "type": "image/png"
     }
