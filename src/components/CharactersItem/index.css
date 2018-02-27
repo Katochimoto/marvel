@@ -1,0 +1,61 @@
+@import "../../style";
+
+.characters-item {
+  display: flex;
+  position: relative;
+  width: 150px;
+  height: 150px;
+
+  @media (--xsmall-viewport) {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.characters-item-photo,
+.characters-item-name {
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition:
+    opacity var(--duration-main) ease,
+    transform var(--duration-main) ease;
+
+  @media (--xsmall-viewport) {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.characters-item-photo {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.characters-item-name {
+  opacity: 0;
+  transform: rotateX(-180deg);
+  padding: 0.5em;
+  margin: 0;
+  background: var(--color-bg);
+}
+
+.characters-item:hover {
+  z-index: 1;
+
+  .characters-item-photo {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+
+  .characters-item-name {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}

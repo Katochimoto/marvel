@@ -22,6 +22,7 @@ export function getCharacters (page) {
           id: item.id,
           modified: item.modified,
           name: item.name,
+          urls: item.urls,
           photo: `${item.thumbnail.path}/standard_xlarge.${item.thumbnail.extension}`,
           resourceURI: item.resourceURI,
         }

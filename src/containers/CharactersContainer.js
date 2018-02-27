@@ -1,22 +1,35 @@
+import React from 'react'
 import { Container } from 'flux/utils'
 import { getCharacters } from '../data/services'
 import Characters from '../components/Characters'
 import store from '../data/store'
 
-function getStores () {
-  return [
-    store,
-  ]
-}
+class CharactersContainer extends React.Component {
+  static getStores() {
+    return [
+      store,
+    ]
+  }
 
-function getState () {
-  const { list } = store.getState()
+  static calculateState() {
+    const {
+      list,
+      scroll,
+    } = store.getState()
 
-  return {
-    list,
-    getCharacter: id => store.getCharacter(id),
-    getCharacters,
+    return {
+      list,
+      scroll,
+      getCharacter: id => store.getCharacter(id),
+      getCharacters,
+    }
+  }
+
+  render() {
+    return <Characters {...this.state} />
   }
 }
 
-export default Container.createFunctional(Characters, getStores, getState)
+export default Container.create(CharactersContainer, {
+  withProps: true
+})

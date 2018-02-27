@@ -2,9 +2,10 @@ import { ReduceStore } from 'flux/utils'
 import { isFSA } from 'flux-standard-action'
 import dispatcher from './dispatcher'
 
-class BioStore extends ReduceStore {
+class Store extends ReduceStore {
   getInitialState () {
     return {
+      scroll: 0,
       list: {
         hasMore: true,
         items: [],
@@ -47,10 +48,15 @@ class BioStore extends ReduceStore {
             ...payload,
           }
         }
+      case 'UPDATE_SCROLL_INFO':
+        return {
+          ...state,
+          scroll: payload
+        }
       default:
         return state
     }
   }
 }
 
-export default new BioStore(dispatcher)
+export default new Store(dispatcher)

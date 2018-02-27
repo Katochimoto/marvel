@@ -13,3 +13,10 @@ export function updateCharactersData (data) {
     payload: data,
   })
 }
+
+export function updateScrollInfo () {
+  dispatcher.dispatch({
+    type: 'UPDATE_SCROLL_INFO',
+    payload: window.pageYOffset || document.documentElement.scrollTop,
+  })
+}
