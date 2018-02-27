@@ -71,6 +71,5 @@
     "Explorer >= 11",
     "Safari >= 10",
     "> 1%"
-  ],
-  "googleTag": "UA-109489660-1"
+  ]
 }

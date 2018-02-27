@@ -15,12 +15,12 @@ var SriPlugin = require('webpack-subresource-integrity');
 var InlineCSP = require('./config/webpack/InlineCSP');
 var package = require('./package.json');
 
-var srcPath = path.join(__dirname, 'src');
-var distPath = path.join(__dirname, 'dist');
 var NODE_ENV = process.env.npm_lifecycle_event === 'build' ?
   'production' :
   'development';
 var isDev = NODE_ENV === 'development';
+var srcPath = path.join(__dirname, 'src');
+var distPath = isDev ? path.join(__dirname, 'dist') : path.join(__dirname, 'docs');
 var homepage = isDev ? '' : package.homepage;
 var GOOGLE_TAG = package.googleTag;
 
